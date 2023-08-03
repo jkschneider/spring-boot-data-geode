@@ -17,12 +17,15 @@ dependencies {
 
 	compileOnly "com.google.code.findbugs:jsr305:$findbugsVersion"
 
+	compileOnly "com.sun.xml.ws:jaxws-rt:2.3.6"
+
 	optional "org.springframework:spring-test"
 
 	runtimeOnly "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
 
 	// See additional testImplementation dependencies declared in the testDependencies project extension
 	// defined in the DependencySetPlugin.
+	testImplementation "com.sun.xml.ws:jaxws-rt:2.3.6"
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude group: "org.skyscreamer", module: "jsonassert"
 	}
